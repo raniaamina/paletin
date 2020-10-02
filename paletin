@@ -19,8 +19,6 @@ if [ -f $PALETTE_NAME.gpl ]; then
     exit
 fi
 
-extcolors "$FILE" > .temp-$2
-
 touch $PALETTE_NAME.gpl
 echo "GIMP Palette" >> $PALETTE_NAME.gpl
 echo "Name: $PALETTE_NAME" >> $PALETTE_NAME.gpl
@@ -29,10 +27,10 @@ echo "#" >> $PALETTE_NAME.gpl
 echo "" >> $PALETTE_NAME.gpl
 
 # parsing
-sed -e '1d' -e '$d' -i .temp-$2
-cat .temp-$2 | cut -b 2-14 | sed 's/(//' | sed 's/)//' | sed 's/,//' | sed 's/,//' >> $PALETTE_NAME.gpl
-
-rm .temp-$2
+extcolors -o text "$FILE" \
+    | sed -n '/\((*)\)/ p' \
+    | awk '{gsub(/\(|,|\)|:/,"")}1 {print $1, $2, $3}' \
+    >> $PALETTE_NAME.gpl
 
 # copying into inkscape directory if exists
 if [ -d $(inkscape --user-data-directory) ] 
