@@ -1,6 +1,6 @@
 # Paletin: Convert Your Own Image Into Color Pallete
 
-Paletin is converter tool to create color palette (gpp) from your own image. This tool is initiated by Gimpscape Community. 
+Paletin is converter tool to create color palette (.*gpl) from your own image. This tool is initiated by Gimpscape Community. 
 
 
 
