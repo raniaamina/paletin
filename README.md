@@ -1,12 +1,12 @@
-# Paletin: Convert Your Own Image Into Color Pallete
+# Paletin: Convert Your Own Image Into Color Palette
 
-Paletin is converter tool to create color palette (.*gpl) from your own image. This tool is initiated by Gimpscape Community. 
-
+Paletin is a converter tool to create a GIMP color palette file (\*.gpl) from your own image. This tool is initiated by Gimpscape Community. 
+=======
 
 
 ## Dependecy
 
-This tool need following package/tool to run as well.
+This tool needs the following package/tool to run as well.
 
 - [extcolors](https://github.com/CairX/extract-colors-py/) (Please refer to its Readme to install this dependency)
 
@@ -30,11 +30,11 @@ sudo chmod +x /usr/local/bin/paletin
 
 ## Usage
 
-Here is command to use paletin
+Here is the command to use paletin
 
-`paletin your-image.jpg palete-name`
+`paletin your-image.jpg palette-name`
 
-If you have inkscape installed in your system, paletin will automatically copy the generated palette into your Inkscape palette directory. Make sure your palette name not containing space.
+If you have inkscape installed in your system, paletin will automatically copy the generated palette into your Inkscape palette directory. Make sure your palette name does not contain any space.
 
 
 
